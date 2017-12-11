@@ -1,0 +1,39 @@
+		<p class="text-info text-center" style="font-size: 17px;">
+			These Appliction Manages how you Recruit a hero in a Specific Squad..<br>
+			<small>List All the Heros Currently Added</b></small>
+		</p>
+		<table style="width: 60%; margin: 0px auto;" class="table table-striped table-dark">
+			  <thead>
+			    <tr>
+			      <th scope="col">#</th>
+			      <th scope="col">Name</th>
+			      <th scope="col">Age</th>
+			      <th scope="col">Special Powers</th>
+			      <th scope="col">Weakness</th>
+			      <th scope="col">Squad</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+
+			  	#if ($heros)
+			  		#foreach($hero in $heros)
+					    <tr>
+					      <th scope="row">$hero.getId()</th>
+					      <td style="color: #fff;font-weight: bolder;display: block;">
+					      	<a href="/hero/#hero.getId()">$hero.getName()</a>
+					      </td>
+					      <td> $hero.getAge() </td>
+					      <td> $hero.getSpecialpowers() </td>
+					      <td> $hero.getWeakness() </td>
+					      <td>hero squad</td>
+					    </tr>
+					#end
+			    #else
+			    <tr>
+			    	<td colspan="5">There are no Heros added at the moment</td>
+			    </tr>
+
+			    #end
+
+			  </tbody>
+			</table>
