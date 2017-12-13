@@ -9,6 +9,7 @@ public  class Hero{
 	private String newWeakness;
 	private  static List<Hero> heros = new ArrayList<Hero>();
 
+// name,age,specialpowers,weakness
 	public Hero(String name,int age,String specialpowers,String weakness){
 		newName=name;
 		newAge=age;

@@ -13,10 +13,9 @@
 			      <th scope="col">Squad</th>
 			    </tr>
 			  </thead>
-			  #if ($heros)
 			  <tbody>
 
-			  	
+			  	#if ($heros)
 			  		#foreach ($hero in $heros)
 					    <tr>
 					      <th scope="row">$hero.getId()</th>
@@ -26,7 +25,7 @@
 					      <td>$hero.getAge()</td>
 					      <td>$hero.getSpecialpowers()</td>
 					      <td>$hero.getWeakness()</td>
-					      <td>hero squad</td>
+					      <td>none</td>
 					    </tr>
 					#end
 			    #else
