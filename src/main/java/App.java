@@ -39,6 +39,9 @@ public class App{
 
 		    	Hero newHero = new Hero(name,age,specialpowers,weakness);
 
+		    	// System.out.println(newHero.getSpecialpowers());
+		    	// System.out.println(newHero.getSpecialpowers());
+
 		    	model.put("template","templates/success.vtl");
 
 		    	return new ModelAndView(model,layout);

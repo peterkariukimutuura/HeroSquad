@@ -13,18 +13,19 @@
 			      <th scope="col">Squad</th>
 			    </tr>
 			  </thead>
+			  #if ($heros)
 			  <tbody>
 
-			  	#if ($heros)
-			  		#foreach($hero in $heros)
+			  	
+			  		#foreach ($hero in $heros)
 					    <tr>
 					      <th scope="row">$hero.getId()</th>
 					      <td style="color: #fff;font-weight: bolder;display: block;">
-					      	<a href="/hero/#hero.getId()">$hero.getName()</a>
+					      	<a href="/hero/$hero.getId()">$hero.getName()</a>
 					      </td>
-					      <td> $hero.getAge() </td>
-					      <td> $hero.getSpecialpowers() </td>
-					      <td> $hero.getWeakness() </td>
+					      <td>$hero.getAge()</td>
+					      <td>$hero.getSpecialpowers()</td>
+					      <td>$hero.getWeakness()</td>
 					      <td>hero squad</td>
 					    </tr>
 					#end
